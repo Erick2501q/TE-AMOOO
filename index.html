@@ -38,11 +38,16 @@
     </style>
 </head>
 <body>
-    <audio autoplay loop>
-        
-        <source src="https://github.com/Erick2501q/musica/raw/refs/heads/main/Mi%20Audio.mp3?raw=true" type="audio/mpeg">
-    </audio>
-    
+    <audio id="miAudio" autoplay loop muted>
+    <source src="https://raw.githubusercontent.com/Erick2501q/musica/main/Mi%20Audio.mp3" type="audio/mpeg">
+</audio>
+    <script>
+    window.onload = function() {
+        var audio = document.getElementById("miAudio");
+        audio.muted = false; // Activa el sonido
+        audio.play().catch(error => console.log("Autoplay bloqueado: " + error));
+    };
+</script>
     <div class="card" id="card">
         <img src="imagenes/gatito.gif" width="300">
         <h2>HOLA AMOR, SOY TU NOVIO</h2>
